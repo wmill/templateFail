@@ -9,6 +9,7 @@ describe('Directive: polkaDot', function () {
   it('should make hidden element visible', inject(function ($rootScope, $compile) {
     element = angular.element('<polka-dot></polka-dot>');
     element = $compile(element)($rootScope);
+    $rootScope.$apply();
     expect(element.text()).toBe('this is the polkaDot directive');
   }));
 });
